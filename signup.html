@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup comfort wheels</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link  href="Compfort wheels.jpg" rel="icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        [type=radio]:checked {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body class="bg-primary-subtle">
+
+    <div class="container-fluid" style="width: 480px;">
+        <div class="row  ">
+            <div class="col-12 mb-5">
+
+                <h2 class="text-center my-5 ">Sign Up</h2>
+                <div class="bg-primary shadow  rounded-4 px-5 pt-5 pb-4">
+                    <div class="form-floating mb-2">
+                        <input onchange="namm()" class="form-control" type="text" id="namee" placeholder="Name"
+                            required>
+                        <label for="name">Name</label>
+                        <p class="d-none" id="namealert"><i
+                                class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>Name must be in Letters
+                        </p>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input onchange="mai()" class="form-control innershad" type="email" id="mail"
+                            placeholder="Email" required>
+                        <label for="Email">Email</label>
+                        <p class="d-none" id="namealert"><i
+                                class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>Enter the correct email formate
+                        </p>
+
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <input onchange="pass()" type="password" class="form-control" id="sipaso"
+                            placeholder="New Password">
+                        <span onclick="show()" class="input-group-text  cr"><i id="eyeclass"
+                                class="bi bi-eye-fill"></i></span><br>
+                    </div>
+
+
+                    <p class="d-none" id="namealert"><i class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>Pass eg (Aheve@494)</p>
+
+                    <div class="form-floating mb-3">
+                        <input onchange="rp()" class="form-control" type="password" id="rpassword"
+                            placeholder="Enter Password again">
+                        <label for="rpassword">Enter Password again</label>
+                        <p class="d-none" id="namealert"><i
+                                class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>Enter the same password which was entered above
+
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <select onchange="con()" class="form-select " name="" id="country">
+                                <option value="0">Country</option>
+                                <option value="1">IND</option>
+                                <option value="2">USA</option>
+                                <option value="3">UK</option>
+                            </select>
+                        </span>
+                        <input type="number" id="num" onchange="pno()" class="form-control "
+                            placeholder="Mobile number">
+
+
+
+                    </div>
+                    <p class="d-none" id="namealert"><i class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>Select the country and enter the valid phone number
+
+
+                    <div class="form-floating mb-3">
+                        <input onchange="add()" class="form-control" type="number" id="aadar"
+                            placeholder="Aadhar number">
+                        <label for="aadar">Aadhar number</label>
+                        <p class="d-none" id="namealert"><i
+                                class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>Enter 12 digit aadhar number
+
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input onchange="paa()" class="form-control" type="text" id="pan" placeholder="Pan card number">
+                        <label for="pan">Pan card number</label>
+                        <p class="d-none" id="namealert"><i
+                                class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>Enter the valid pan number eg(AAAAA1234A)
+
+
+                    </div>
+
+                    <div class=" mb-3 ">
+                        <div class=" text-white">
+                            <h5>Gender</h5>
+                        </div>
+                        <div class="rada">
+                            <input onchange="ge()" class="form-check-input rad " type="radio" name="exampleRadios" value="1" id="male">
+                            <label class="form-check-label me-3" for="male">
+                                Male
+                            </label>
+
+                            <input onchange="ge()" class="form-check-input rad " type="radio" value="2" name="exampleRadios" id="female">
+                            <label class="form-check-label me-3" for="female">
+                                Female
+                            </label>
+
+                            <input  onchange="ge()" class="form-check-input rad" type="radio" value="3" id="other" name="exampleRadios">
+                            <label class="form-check-label" for="other">
+                                Other
+                            </label>
+                            <p class="d-none" id="namealert"><i
+                                class="bi ms-2 me-3 bi-exclamation-triangle-fill"></i>You have selected other gender
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label onchange="dobb()" for="" id="db" class="form-label">Date of birth</label>
+                        <input type="date" max="" class="form-control" name="" id="dob" placeholder="">
+
+                    </div>
+
+                    <div class="m-4 ">
+                        <button class="btn btn-danger ms-5 ">Cancel</button>
+                        <button onclick="sig()" class="btn btn-success float-end me-5">Signin</button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+
+</html>

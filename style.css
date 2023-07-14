@@ -1,0 +1,120 @@
+.text-indent {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+
+
+
+.mmt {
+    margin-top: -50px;
+}
+
+.cr {
+    cursor: pointer;
+    
+}
+
+.bi {
+   animation: gift  2s ease infinite;
+   animation-direction: alternate;
+
+
+}
+
+
+@keyframes gift {
+    0% {
+        /* background: linear-gradient(red, red, blue, green);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        color: red;
+    }
+
+    
+
+    50%{      
+         /* background: linear-gradient(green, green, red,blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        color: blue;
+    }
+    100% {
+        /* background: linear-gradient(blue, blue,green,red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+color: green;
+    }
+
+}
+
+
+.pop {
+
+    /* animation: box ease 1s; */
+
+    z-index: 1;
+    background-color: blue;
+    position: absolute;
+    top: 180px;
+    left: 435px;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+}
+
+.ani {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+.im {
+    width: 80px;
+    position: absolute;
+    top: 50px;
+    left: 135px;
+    animation: animate;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes animate {
+    0% {
+        left: 200px;
+        transform: scale(1.5);
+    }
+
+    50% {
+        left: 100px;
+        transform: scale(1.2);
+
+    }
+
+    70% {
+        left: 135px;
+        transform: scale();
+    }
+
+    100% {
+
+        transform: scale(.6);
+    }
+}
+
+@keyframes box {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}

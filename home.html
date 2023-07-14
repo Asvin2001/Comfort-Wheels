@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfort wheels</title>
+    <link rel="stylesheet" href="home.css">
+    <link  href="Compfort wheels.jpg" rel="icon">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body  class="">
+
+
+    <div class="bg-light p-3">
+        <div class="row">
+            <div class="col-4">
+                <img src="Compfort wheels.png" style="width:20vh;" alt="">
+            </div>
+            <div class="col-4">
+                <h3 class="mt-3">Comfort Wheels Travels <svg class="float-end mt-2" xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20" fill="currentColor" class="bi  bi-gift-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
+                    </svg></h3>
+            </div>
+            <div class="col-4   ">
+
+                <button onclick="lor()" class="btn mt-3 float-end  btn-primary">
+
+                    <p id="lou"> </p>
+                </button>
+
+
+            </div>
+
+        </div>
+
+        <nav class="navbar mt-3  navbar-expand-lg navbar-dark bg-primary">
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Social Media
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Facebook</a></li>
+                            <li><a class="dropdown-item" href="#">Instagram</a></li>
+                            <li><a class="dropdown-item" href="#">Twitter</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <div class="bgim  ">
+
+            <div class="container float-start d-block " style="width:600px; height:458px;">
+                <div class="container shadow   mt-4 rounded-3 ms-4 py-3 d-flex justify-content-center bg-primary ">
+                    <div class=" " style="width: 450px;">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mt-3 mb-1">
+
+                                    <input type="text" class="form-control " id="from" name="" value=""
+                                        placeholder="From">
+
+                                    <label class="form-label" for="from">From</label>
+
+                                </div>
+                                <div class="text-center">
+                                    <i onclick="intr()" class="bi bg-white rounded-5 p-1  bi-arrow-down-up"></i>
+                                </div>
+                                <div class="form-floating mt-1 ">
+                                    <input type="text" class="form-control " id="to" name="" value="" placeholder="To">
+
+                                    <label class="form-label" for="from">To</label>
+
+                                </div>
+                                <div class="form-floating mt-3 ">
+                                    <input type="Text" class="form-control " id="busno" name="" value=""
+                                        placeholder="Bus Route number">
+
+                                    <label class="form-label" for="from">Bus Route number</label>
+
+                                </div>
+                                <div class="h mt-3 text-white">
+                                    <h5>Citizen Ship</h5>
+                                </div>
+
+                                <div class="row  text-white">
+                                    <div class="form-check col-4">
+                                        <input class="form-check-input" type="radio" name="hi" id="child">
+                                        <label class="form-check-label" for="child">
+                                            Child
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-4">
+                                        <input class="form-check-input" type="radio" name="hi" id="adult">
+                                        <label class="form-check-label" for="adult">
+                                            Adult
+                                        </label>
+                                    </div>
+                                    <div class="form-check  col-4">
+                                        <input class="form-check-input" type="radio" name="hi" id="senior">
+                                        <label class="form-check-label" for="senior">
+                                            Senior
+                                        </label>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="col-6">
+
+                                <div class="form-floating mt-3 mb-4">
+                                    <input type="date" class="form-control " id="date" name="" value="" max=""
+                                        placeholder="Date of journey">
+
+                                    <label class="form-label" for="date">Date of journey</label>
+
+                                </div>
+
+                                <div style="margin-top: 32px;" class="form-floating mb-3">
+                                    <input type="text" class="form-control " id="aadar" name="" value=""
+                                        placeholder="Aadhar number">
+
+                                    <label class="form-label" for="aadar">Aadhar number</label>
+
+                                </div>
+
+
+                                <select style="padding: 16px 10px;" id="buty" class="   form-select    mb-3">
+                                    <option value="0">Bus Type</option>
+                                    <option value="1">Non Ac Sleeper</option>
+                                    <option value="2">Non-AC Semi sleeper</option>
+                                    <option value="3">Ac Sleeper</option>
+                                    <option value="4">Ac Semi Sleeper</option>
+                                </select>
+
+
+                                <select style="padding: 16px 10px;" id="marti" class="  form-select    mb-4">
+                                    <option value="0">Martial Status</option>
+                                    <option value="1">Single</option>
+                                    <option value="2">Married</option>
+
+                                </select>
+
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                        <button onclick="ser()" class="btn btn-success mx-auto d-block">Search</button>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <img src="Compfort wheels.png " class="float-end mt-5 " style="width: 600px;" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div id="ale" class="alert position-absolute start-50 top-50 alert-danger d-none">
+
+
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="home.js"></script>
+</body>
+
+</html>
