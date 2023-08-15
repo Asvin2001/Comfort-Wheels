@@ -9,8 +9,8 @@ h = document.getElementById("buty")
 i = document.getElementById("marti")
 j = document.getElementById("ale")
 k = document.getElementById("date")
-o=document.getElementById("lou")
-p=document.getElementById("man")
+o = document.getElementById("lou")
+p = document.getElementById("man")
 
 
 letteronly = /^[a-zA-Z ]+$/
@@ -21,7 +21,7 @@ bus = /^[A-Z]{2}[0-9]{5}$/
 
 l = new Date()
 
-day = l.getDate() 
+day = l.getDate()
 mont = l.getMonth() + 1
 yea = l.getFullYear()
 
@@ -29,13 +29,13 @@ today = (yea + "-0" + mont + "-" + day)
 
 k.setAttribute("min", today)
 
-o.innerHTML=("log out "+(localStorage.getItem("Name")))
+o.innerHTML = ("log out " + (localStorage.getItem("Name")))
 
 
 
 
-function lor(){
-    open("Login.html","_self")
+function lor() {
+    open("Login.html", "_self")
 
 }
 
@@ -55,8 +55,22 @@ function intr() {
 }
 
 
+function bnoo() {
+    if (c.value.length > 7) {
+        c.value = c.value.slice(0, 7)
+
+    }
+}
 
 
+function adrin(){
+
+    if (g.value.length > 12) {
+        g.value = g.value.slice(0, 12)
+
+    }
+
+}
 
 
 function ser() {
@@ -404,7 +418,7 @@ function ser() {
         }
         else {
             j.classList.remove("d-none")
-            j.innerHTML = ("This is required field)")
+            j.innerHTML = ("Enter the to place")
         }
 
 
@@ -412,7 +426,7 @@ function ser() {
 
     else {
         j.classList.remove("d-none")
-        j.innerHTML = ("This is required field)")
+        j.innerHTML = ("Enter the from place")
     }
 
 

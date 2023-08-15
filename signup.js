@@ -10,10 +10,33 @@ var j = document.getElementById("other")
 var k = document.getElementById("male")
 var l = document.getElementById("female")
 var m = document.getElementById("dob")
+var o = document.getElementById("age")
 
 var p = document.getElementsByTagName("p")
 var i = document.getElementsByTagName("i")
 
+
+
+
+
+
+
+function dobb() {
+    ag = new Date(m.value)
+
+    milliDay = 1000 * 60 * 60 * 24;
+
+    ageInDays = (n - ag) / milliDay;
+
+    agee = ageInDays / 365;
+
+    age = Math.floor(agee)
+
+    o.value = age + " Years old"
+
+
+
+}
 
 
 
@@ -27,16 +50,25 @@ today = (yea + "-0" + mont + "-" + day)
 
 
 
+//
+
+// console.log(age)
+
+
 m.setAttribute("max", today)
+
+
+
 
 letteronly = /^[a-zA-Z ]+$/
 aile = /^[a-zA-Z0-9._]+\@[a-zA-Z0-9]+\.[a-zA-Z0-9-]*$/
 assw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
 ind = /^[0-9]{10,10}$/
 usa = /^[0-9]{11,11}$/
-uk = /^[0]{1}[0-9]{10,10}$/
+uk = /^[0]{1}[0-9]{10y ,10}$/
 idr = /^[0-9]{12,12}$/
-pan = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/
+pan = /^[A-Za-z]{5}[0-9]{4}[a-zA-Z]{1}$/
+
 
 
 
@@ -128,6 +160,56 @@ function rp() {
 
 }
 
+function pcng() {
+
+
+    if (f.value == 0) {
+
+
+        p[4].className = "d-block text-white bg-danger rounded-3 pb-2"
+
+
+
+    }
+
+    else if (f.value == 1) {
+
+
+
+        if (e.value.length > 10) {
+            e.value = e.value.slice(0, 10)
+
+
+        }
+    }
+
+
+    else if (f.value == 2) {
+
+
+
+        if (e.value.length > 11) {
+            e.value = e.value.slice(0, 11)
+
+
+        }
+    }
+
+
+    else if (f.value == 3) {
+
+
+
+        if (e.value.length > 11) {
+            e.value = e.value.slice(0, 11)
+
+
+        }
+    }
+
+
+
+}
 
 
 
@@ -136,7 +218,7 @@ function pno() {
 
     if (f.value == 0) {
 
-        
+
         p[4].className = "d-block text-white bg-danger rounded-3 pb-2"
 
 
@@ -199,7 +281,17 @@ function pno() {
 
 }
 
+
+function adh() {
+    if (g.value.length > 12) {
+        g.value = g.value.slice(0, 12)
+    }
+}
+
+
 function add() {
+
+
     if (g.value.match(idr)) {
 
         p[5].className = "d-none"
@@ -210,6 +302,15 @@ function add() {
         p[5].className = "d-block text-white bg-danger rounded-3 pb-2"
 
     }
+}
+
+function pcn() {
+    if (h.value.length > 10) {
+        h.value = h.value.slice(0, 10)
+    }
+
+
+    // h.value=(h.value)
 }
 
 function paa() {
@@ -225,17 +326,17 @@ function paa() {
     }
 }
 
-function con(){
-    if(f.value == 0){
-        x="Not selected"
+function con() {
+    if (f.value == 0) {
+        x = "Not selected"
     }
 
-    if(f.value == 1){
-        x="INDIA"
-    } if(f.value == 2){
-        x="USA"
-    } if(f.value == 3){
-        x="UK"
+    if (f.value == 1) {
+        x = "INDIA"
+    } if (f.value == 2) {
+        x = "USA"
+    } if (f.value == 3) {
+        x = "UK"
     }
 }
 
@@ -246,25 +347,25 @@ function con(){
 function ge() {
     if (k.checked) {
         p[7].className = "d-none"
-        z="male"
+        z = "male"
 
 
     }
 
     else if (j.checked) {
         p[7].className = "d-block text-white bg-danger rounded-3 pb-2"
-z="Other"
+        z = "Other"
 
     }
 
     else if (l.checked) {
         p[7].className = "d-none"
 
-z="Female"
+        z = "Female"
     }
     else {
         p[7].className = "d-block text-white bg-danger rounded-3 pb-2"
-z=0
+        z = 0
     }
 }
 
@@ -292,45 +393,50 @@ function sig() {
                                     if (e.value.match(ind)) {
                                         if (k.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+                                            open("Login.html", "_self")
                                         }
 
                                         else if (j.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 
                                         else if (l.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 
@@ -346,46 +452,52 @@ function sig() {
 
                                         if (k.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 
                                         else if (j.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 
                                         else if (l.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 
@@ -401,46 +513,52 @@ function sig() {
 
                                         if (k.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 
                                         else if (j.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 
                                         else if (l.checked) {
 
-                                            localStorage.setItem("Name",a.value)
-                                            localStorage.setItem("Email",b.value)
-                                            localStorage.setItem("Password",c.value)
-                                            localStorage.setItem("Country",x)
-                                            localStorage.setItem("Mobile Number",e.value)
-                                            localStorage.setItem("Adhaar Number",g.value)
-                                            localStorage.setItem("Pan card number",h.value)
-                                            localStorage.setItem("gender",z)
-                                            localStorage.setItem("Date of birth",m.value)
-                                            open("Login.html","_self")
+                                            localStorage.setItem("Name", a.value)
+                                            localStorage.setItem("Email", b.value)
+                                            localStorage.setItem("Password", c.value)
+                                            localStorage.setItem("Country", x)
+                                            localStorage.setItem("Mobile Number", e.value)
+                                            localStorage.setItem("Adhaar Number", g.value)
+                                            localStorage.setItem("Pan card number", h.value)
+                                            localStorage.setItem("gender", z)
+                                            localStorage.setItem("Date of birth", m.value)
+                                            localStorage.setItem("age", age)
+
+                                            open("Login.html", "_self")
 
                                         }
 

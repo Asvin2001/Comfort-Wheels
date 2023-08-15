@@ -10,20 +10,20 @@ i = document.getElementById("resebt")
 j = document.getElementById("nem")
 k = document.getElementById("alet")
 l = document.getElementById("alt")
+m = document.getElementById("sin")
 
 assw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
 ico = document.getElementsByTagName("i")
 
 
 
-if(localStorage.getItem("Name")==null){
-    alert("You don't have an account Please Sign up first")
-    window.open("signup.html","_self")
-}
+// if(localStorage.getItem("Name")==null){
+//     alert("You don't have an account Please Sign up first")
+//     window.open("signup.html","_self")
+// }
 
 
 
-var signinpasswordwithshow = document.getElementById("sipaso")
 
 
 
@@ -57,11 +57,20 @@ function showo() {
     }
 
 }
+
+
+
+m.classList.add("d-none")
+m.innerHTML="Sign up"
 function loo() {
     if (a.value == localStorage.getItem("Name")) {
+        // m.remove()
+        m.classList.add("d-none")
+
+
 
         if (b.value == localStorage.getItem("Password")) {
-            open("home.html","_self")
+            open("home.html", "_self")
             l.classList.add("d-none")
 
         }
@@ -76,9 +85,11 @@ function loo() {
     }
 
     else if (a.value == localStorage.getItem("Email")) {
+        m.classList.add("d-none")
+
 
         if (b.value == localStorage.getItem("Password")) {
-            open("home.html","_self")
+            open("home.html", "_self")
 
             l.classList.add("d-none")
 
@@ -93,7 +104,8 @@ function loo() {
     }
     else {
         alt.classList.remove("d-none")
-        k.innerHTML = ("Invalid details")
+        k.innerHTML = ("User name or email not found Please sign in !!")
+        m.classList.remove("d-none")
     }
 }
 
@@ -151,7 +163,7 @@ function res() {
     }
     else {
         alt.classList.remove("d-none")
-            k.innerHTML = ("Invalid email")
+        k.innerHTML = ("Invalid email")
 
     }
 }
